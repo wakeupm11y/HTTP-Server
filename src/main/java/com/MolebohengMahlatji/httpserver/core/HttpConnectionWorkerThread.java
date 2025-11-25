@@ -28,11 +28,6 @@ public class HttpConnectionWorkerThread extends Thread {
 			outputStream = socket.getOutputStream();
 			// TODO: we should do the reading
 
-			int _byte;
-			while ((_byte = inputStream.read()) >= 0) {
-				System.out.print((char) _byte);
-			}
-
 			// TODO: we would do the writing
 			String html = "<html><head><title>Simple Java HTTP Server</title><body><h1>This page was serverd using my simple http server</h1></body></head></html>";
 			String response = "HTTP/1.1 200 OK" + CRLF + "Content-Length: " + html.getBytes().length
